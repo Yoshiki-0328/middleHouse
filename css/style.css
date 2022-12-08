@@ -1,0 +1,271 @@
+/* 共通設定---------------------- */
+body{
+    font-size: 100%;
+    font-family: 'Crimson Text', serif;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+ul,ol{
+    padding-left: 0;
+    margin: 0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+img{
+    max-width: 100%;
+}
+
+h1,h2,h3{
+    margin: 0;
+}
+p{
+    margin: 0;
+}
+
+/* header------------------------ */
+header{
+    width: 300px;
+    height: 100vh;
+    padding: 20px 50px;
+    background-color: aqua;
+    /* サイドメニューを左に固定 */
+    /* position: fixed; */
+}
+
+header h1{
+    margin-bottom: 30px;
+}
+
+header nav{
+    font-size: 0.9rem;
+    line-height: 2.5;
+}
+
+header .nav-menu{
+    margin-bottom: 50px;
+}
+
+/* container------------------------------ */
+.container{
+    width: 100%;
+    background-color: grey;
+    padding-left: 300px;
+}
+/* main--------------------------- */
+main{
+    background-color: blue;
+}
+/* video---------------------- */
+#video{
+    height: 100vh;
+    width: 100%;
+    background-color: blueviolet;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* 共通部分-------------------- */
+.wrapper{
+    max-width: 900px;
+    background-color: black;
+    margin: 20px auto 100px;
+    padding: 0 20px;
+}
+
+.sec-title{
+    color: white;
+    font-size: 1.75rem;
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.sec-title::before,
+.sec-title::after{
+    content: "";
+    width: 25%;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+}
+
+.sec-title::before{
+    left: 0;
+}
+.sec-title::after{
+    right: 0;
+}
+
+/* Project-------------------- */
+#project .list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#project .list li{
+    width: 47%;
+    position: relative;
+    border: 1px solid white;
+    margin-bottom: 40px;
+}
+
+#project .list li .name{
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: inline;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+/* feature-------------------- */
+#feature{
+    color: white;
+}
+
+#feature .list{
+    display: flex;
+    justify-content: space-between;
+}
+
+#feature .list li{
+    width: 30%;
+    text-align: center;
+}
+
+#feature .list li a{
+    color: white;
+    display: block;
+    border: 1px solid white;
+    width: auto;
+    height: 230px;
+    line-height: 230px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* flow--------------------------- */
+#flow .wrapper{
+    background-color: blanchedalmond;
+}
+
+#flow .step{
+    margin: 50px 0;
+    display: flex;
+}
+
+#flow .step .figure{
+    width: 200px;
+    position: relative;
+}
+
+/* #flow .step .figure::before{
+    content: "";
+    width: 50px;
+    height: 600px;
+    background-color: #ffdd00;
+    position: absolute;
+    top: 0;
+    left: 75px;
+} */
+
+
+#flow .step .figure li{
+    width: 200px;
+    height: 80px;
+    line-height: 80px;
+    background-color: grey;
+    color: white;
+    text-align: center;
+    margin-bottom: 70px;
+    position: relative;
+}
+
+#flow .step .figure li::before{
+    content: "";
+    border-top: 30px solid grey;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+}
+
+.step .description{
+    max-width: 600px;
+    margin: 0 0 0 70px;
+}
+
+.step .description dt{
+    font-size: 1.25rem;
+    border-bottom: 1px solid grey;
+    position: relative;
+    line-height: 2;
+}
+
+.step .description dt span{
+    background-color: grey;
+    color: white;
+    position: absolute;
+    left: -35px;
+    top: 10px;
+    border-radius: 50%;
+    display: block;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+#flow .step .description dd{
+    margin: 10px 0px 30px;
+}
+
+/* contact------------------ */
+#contact .wrapper{
+    background-color: blanchedalmond;
+}
+
+#contact .link{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+#contact .link a{
+    display: block;
+    width: 30%;
+    border: 1px solid grey;
+    padding:50px 0;
+    font-size: 0.875rem;
+    text-align: center;
+    transition: all 0.2s;
+    position: relative;
+}
+
+#contact .link a::before{
+    content: "";
+    border-left: 15px solid black;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    position: absolute;
+    bottom: -5px;
+    right: 2px;
+    transform: rotate(45deg);
+}
+
+#contact .link a:hover{
+    outline: 3px solid black;
+}
+
