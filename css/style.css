@@ -1,271 +1,532 @@
 /* 共通設定---------------------- */
-body{
-    font-size: 100%;
-    font-family: 'Crimson Text', serif;
-    font-family: 'Noto Sans JP', sans-serif;
+body {
+  font-size: 100%;
+  font-family: "Crimson Text", serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
-ul,ol{
-    padding-left: 0;
-    margin: 0;
+ul,
+ol {
+  padding-left: 0;
+  margin: 0;
 }
 
-li{
-    list-style: none;
+li {
+  list-style: none;
 }
 
-a{
-    text-decoration: none;
-    color: black;
+a {
+  text-decoration: none;
+  color: black;
 }
 
-img{
-    max-width: 100%;
+img {
+  max-width: 100%;
 }
 
-h1,h2,h3{
-    margin: 0;
+h1,
+h2,
+h3 {
+  margin: 0;
 }
-p{
-    margin: 0;
+p {
+  margin: 0;
 }
 
 /* header------------------------ */
-header{
-    width: 300px;
-    height: 100vh;
-    padding: 20px 50px;
-    background-color: aqua;
-    /* サイドメニューを左に固定 */
-    /* position: fixed; */
+header {
+  width: 300px;
+  height: 100vh;
+  padding: 20px 50px;
+  /* background-color: aqua; */
+  /* サイドメニューを左に固定 */
+  position: fixed;
 }
 
-header h1{
-    margin-bottom: 30px;
+header h1 {
+  margin-bottom: 30px;
 }
 
-header nav{
-    font-size: 0.9rem;
-    line-height: 2.5;
+header nav {
+  font-size: 0.9rem;
+  line-height: 2.5;
 }
 
-header .nav-menu{
-    margin-bottom: 50px;
+header .nav-menu {
+  margin-bottom: 50px;
 }
 
 /* container------------------------------ */
-.container{
-    width: 100%;
-    background-color: grey;
-    padding-left: 300px;
+.container {
+  width: 100%;
+  /* background-color: grey; */
+  padding-left: 300px;
 }
 /* main--------------------------- */
-main{
-    background-color: blue;
-}
+
 /* video---------------------- */
-#video{
-    height: 100vh;
-    width: 100%;
-    background-color: blueviolet;
-    background-attachment: fixed;
-    background-position: center;
+#video {
+  width: 100%;
+  height: 100vh;
+}
+.bg-video {
+  position: fixed;
+  /* top: -220px; */
+  z-index: -10;
 }
 
 /* 共通部分-------------------- */
-.wrapper{
-    max-width: 900px;
-    background-color: black;
-    margin: 20px auto 100px;
-    padding: 0 20px;
+.wrapper {
+  max-width: 900px;
+  /* background-color: rgb(0, 0, 0,0.2); */
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+/* section{
+    background-color: rgb(0, 0, 0,.5);
+} */
+
+#project {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
 }
 
-.sec-title{
-    color: white;
-    font-size: 1.75rem;
-    text-align: center;
-    position: relative;
-    margin-bottom: 50px;
+#feature {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#contact,
+#flow {
+  background-color: white;
+}
+
+.sec-title {
+  color: white;
+  font-size: 1.75rem;
+  text-align: center;
+  position: relative;
+  margin-bottom: 50px;
 }
 
 .sec-title::before,
-.sec-title::after{
-    content: "";
-    width: 25%;
-    height: 1px;
-    background-color: white;
-    position: absolute;
-    top: 50%;
+.sec-title::after {
+  content: "";
+  width: 25%;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
 }
 
-.sec-title::before{
-    left: 0;
+.sec-title::before {
+  left: 0;
 }
-.sec-title::after{
-    right: 0;
+.sec-title::after {
+  right: 0;
+}
+
+#flow .sec-title,
+#contact .sec-title {
+  color: black;
+}
+
+#flow .sec-title::before,
+#flow .sec-title::after,
+#contact .sec-title::before,
+#contact .sec-title::after {
+  background-color: black;
 }
 
 /* Project-------------------- */
-#project .list{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+#project .list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-#project .list li{
-    width: 47%;
-    position: relative;
-    border: 1px solid white;
-    margin-bottom: 40px;
+#project .list li {
+  width: 47%;
+  position: relative;
+  border: 1px solid white;
+  margin-bottom: 40px;
 }
 
-#project .list li .name{
-    color: white;
-    font-size: 0.8rem;
-    font-weight: bold;
-    display: inline;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+#project .list li .name {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: inline;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 /* feature-------------------- */
-#feature{
-    color: white;
+#feature {
+  color: white;
 }
 
-#feature .list{
-    display: flex;
-    justify-content: space-between;
+#feature .list {
+  display: flex;
+  justify-content: space-between;
 }
 
-#feature .list li{
-    width: 30%;
-    text-align: center;
+#feature .list li {
+  width: 30%;
+  text-align: center;
 }
 
-#feature .list li a{
-    color: white;
-    display: block;
-    border: 1px solid white;
-    width: auto;
-    height: 230px;
-    line-height: 230px;
-    border-radius: 50%;
-    margin-bottom: 20px;
+/* 上にかぶせたときに円に動きを付ける */
+#feature .list li a {
+  margin: 0 auto;
+  color: white;
+  display: block;
+  border: 1px solid white;
+  width: 100%;
+  padding: calc(50% - 11px) 0;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+#feature .list li a::before {
+  content: "";
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  opacity: 0.3;
+  transition: all 0.5s;
+}
+
+#feature .list li a:hover:before {
+  left: 0;
 }
 
 /* flow--------------------------- */
-#flow .wrapper{
-    background-color: blanchedalmond;
+#flow .step {
+  margin: 50px 0;
+  display: flex;
 }
 
-#flow .step{
-    margin: 50px 0;
-    display: flex;
+#flow .step .figure {
+  width: 200px;
+  position: relative;
 }
 
-#flow .step .figure{
-    width: 200px;
-    position: relative;
+#flow .step .figure::before {
+  content: "";
+  width: 50px;
+  height: 600px;
+  background-color: #ffdd00;
+  position: absolute;
+  top: 0;
+  left: 75px;
 }
 
-/* #flow .step .figure::before{
-    content: "";
-    width: 50px;
-    height: 600px;
-    background-color: #ffdd00;
-    position: absolute;
-    top: 0;
-    left: 75px;
-} */
-
-
-#flow .step .figure li{
-    width: 200px;
-    height: 80px;
-    line-height: 80px;
-    background-color: grey;
-    color: white;
-    text-align: center;
-    margin-bottom: 70px;
-    position: relative;
+#flow .step .figure li {
+  width: 200px;
+  height: 80px;
+  line-height: 80px;
+  background-color: grey;
+  color: white;
+  text-align: center;
+  margin-bottom: 70px;
+  position: relative;
 }
 
-#flow .step .figure li::before{
-    content: "";
-    border-top: 30px solid grey;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    position: absolute;
-    bottom: -30px;
-    left: 0;
+#flow .step .figure li::before {
+  content: "";
+  border-top: 30px solid grey;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  position: absolute;
+  bottom: -30px;
+  left: 0;
 }
 
-.step .description{
-    max-width: 600px;
-    margin: 0 0 0 70px;
+.step .description {
+  max-width: 600px;
+  margin: 0 0 0 70px;
 }
 
-.step .description dt{
-    font-size: 1.25rem;
-    border-bottom: 1px solid grey;
-    position: relative;
-    line-height: 2;
+.step .description dt {
+  font-size: 1.25rem;
+  border-bottom: 1px solid grey;
+  position: relative;
+  line-height: 2;
 }
 
-.step .description dt span{
-    background-color: grey;
-    color: white;
-    position: absolute;
-    left: -35px;
-    top: 10px;
-    border-radius: 50%;
-    display: block;
-    height: 30px;
-    width: 30px;
-    text-align: center;
-    line-height: 30px;
+.step .description dt span {
+  background-color: grey;
+  color: white;
+  position: absolute;
+  left: -35px;
+  top: 10px;
+  border-radius: 50%;
+  display: block;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  line-height: 30px;
 }
 
-#flow .step .description dd{
-    margin: 10px 0px 30px;
+#flow .step .description dd {
+  margin: 10px 0px 30px;
 }
 
 /* contact------------------ */
-#contact .wrapper{
-    background-color: blanchedalmond;
+
+#contact .link {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
 }
 
-#contact .link{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
+#contact .link a {
+  display: block;
+  width: 30%;
+  border: 1px solid grey;
+  padding: 50px 0;
+  font-size: 0.875rem;
+  text-align: center;
+  transition: all 0.2s;
+  position: relative;
 }
 
-#contact .link a{
-    display: block;
-    width: 30%;
-    border: 1px solid grey;
-    padding:50px 0;
-    font-size: 0.875rem;
-    text-align: center;
-    transition: all 0.2s;
-    position: relative;
+#contact .link a::before {
+  content: "";
+  border-left: 15px solid black;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  position: absolute;
+  bottom: -5px;
+  right: 2px;
+  transform: rotate(45deg);
 }
 
-#contact .link a::before{
-    content: "";
-    border-left: 15px solid black;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
+#contact .link a:hover {
+  outline: 3px solid black;
+}
+
+/* footer--------------------------------- */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+#to-top {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  border-radius: 50%;
+  bottom: 15px;
+  right: 15px;
+  background-color: black;
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+#to-top.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+#to-top::before {
+  content: "";
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #fff;
+  position: relative;
+  left: 0px;
+  bottom: 3px;
+}
+
+footer .menu {
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+footer .menu li {
+  font-size: 0.9rem;
+  padding: 0 20px;
+  line-height: 1.5;
+  border-left: 1px solid white;
+}
+
+footer .menu li:first-child {
+  border-left: none;
+}
+
+footer .menu li a {
+  color: white;
+}
+
+.copyright {
+  padding: 20px 0;
+  font-size: 0.8rem;
+}
+
+/* レシポンシブ対応 */
+@media (max-width: 960px) {
+  /* header------- */
+  header {
+    width: 100%;
+    height: 100px;
+    padding: 20px 30px;
+    background-color: white;
+    position: fixed;
+    z-index: 100;
+
+  }
+
+  header h1 {
+    margin-bottom: 30px;
+    width: 180px;
+  }
+
+  header nav {
+    background-color: white;
     position: absolute;
-    bottom: -5px;
-    right: 2px;
-    transform: rotate(45deg);
-}
+    left: -300px;
+    top: 0px;
+    width: 300px;
+    height: 100vh;
+    padding: 50px;
+    z-index: 300;
+    transition: all 0.5s;
+  }
 
-#contact .link a:hover{
-    outline: 3px solid black;
-}
+  .hamburger {
+    width: 30px;
+    height: 40px;
+    position: absolute;
+    top: 22px;
+    right: 18px;
+    cursor: pointer;
+  }
+  .hamburger span {
+    display: inline-block;
+    background-color: black;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    transition: all 0.5s;
+  }
 
+  .hamburger span:nth-of-type(1) {
+    top: 10px;
+  }
+  .hamburger span:nth-of-type(2) {
+    top: 20px;
+  }
+  .hamburger span:nth-of-type(3) {
+    top: 30px;
+  }
+
+/* ハンバーガーメニュー押されたとき */
+  header.open nav{
+    left: 0px;
+  }
+
+  header.open #mask{
+    width: 100vw;
+    height: 100vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+    header.open .hamburger {
+    z-index: 150;
+  }
+    header.open .hamburger span {
+    background-color: white;
+  }
+
+    header.open .hamburger span:nth-of-type(1) {
+    top: 20px;
+    transform: rotate(135deg);
+  }
+    header.open .hamburger span:nth-of-type(2) {
+    opacity: 0;
+  }
+    header.open .hamburger span:nth-of-type(3) {
+    top: 20px;
+    transform: rotate(-135deg);
+  }
+
+  /* container------------------------------ */
+  .container {
+    padding-left: 0px;
+  }
+  /* main--------------------------- */
+
+  /* video---------------------- */
+  #video {
+    width: 100%;
+    height: 100vh;
+  }
+  .bg-video {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    position: fixed;
+    top: 100px;
+    z-index: -10;
+  }
+  
+/* Project-------------------- */
+#project .list {
+    flex-direction: column;
+  }
+  
+  #project .list li {
+    width: 100%;
+  }
+
+/* flow-------------------- */
+  #flow .step {
+    flex-direction: column;
+  }
+  
+  #flow .step .figure {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  #flow .step .figure::before {
+    top: 0;
+    left: calc(50% - 25px);
+  }
+  
+  #flow .step .figure li {
+    width: 100%;
+  }
+  
+  #flow .step .figure li::before {
+    border-top: 30px solid grey;
+    border-left: calc(100vw *0.37) solid transparent;
+    border-right: calc(100vw *0.37) solid transparent;
+    width: 100%;
+  }  
+
+  /* contact */
+#contact .link {
+    flex-direction: column;
+  }
+  
+  #contact .link a {
+    width: 60%;
+    margin: 0 auto 50px;
+}
+}
